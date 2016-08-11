@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>横向自定义滚动条</title>
+	<style>
+	*{ margin:0; padding:0;}
+	li{ list-style:none;}
+	
+	.wrap{ width:1000px; height:140px; margin:20px auto; border:1px solid; position:relative; overflow:hidden;}
+	.wrap ul{ position:absolute; left:0; top:0; width:200%;}
+	.wrap ul li{ float:left; width:100px; height:100px; margin:0 10px 0 0; background:#ccc;}
+	
+	/* scroll */
+	.scroll{ position:absolute; bottom:10px; left:0; right:0; height:2px; background:red;}
+	.scroll span{ position:absolute; left:0; top:0; bottom:0; margin:auto; width:100px; height:20px; background:#000; cursor:pointer;}
+	</style>
+</head>
+
+<body>
+
+
+<div class="wrap">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+		<li>12</li>
+		<li>13</li>
+		<li>14</li>
+		<li>15</li>
+	</ul>
+	<div class="scroll">
+		<span class="scrollBar"></span>
+	</div>
+</div>
+
+<script>
+	//获取元素
+	var wrap=document.querySelector('.wrap');
+	var ul=wrap.getElementsByTagName('ul')[0];
+	var lis=ul.getElementsByTagName('li');
+	var scroll=document.querySelector('.scroll');	//滑线
+	var span=scroll.querySelector('span');	//滑块
+	var liW=lis[0].offsetWidth;	//一个li的宽度
+	var wrapW=wrap.offsetWidth;
+	var iMarginR=parseInt(css(lis[0],'marginRight'));	//margin-right
+	var len=lis.length;
+	
+	//设置ul的宽度和滑块的宽度
+	ul.style.width=(iMarginR+liW)*len+'px';
+	var ulW=ul.offsetWidth;
+	
+	//滑块的宽度
+	span.style.width= (wrapW*wrapW)/ulW +'px';
+
+	//滑动的最大距离
+	var spanMax=wrapW-span.offsetWidth;
+
+	//滑动的距离
+	var liMax=ulW-wrapW;
+	var leftNum=0;
+	
+	//自定义滑动
+	span.onmousedown=function(ev){
+		var ev=ev||event;
+		var disX=ev.clientX-this.offsetLeft;
+		
+		document.onmousemove=function(ev){
+			var ev=ev||event;
+			leftNum=ev.clientX-disX;			
+			slideTo();			
+		}
+		document.onmouseup=function(){
+			document.onmousemove=document.onmouseup=null;
+		}
+		return false;
+	}
+	
+	//滚轮控制
+	mScroll(wrap,function(){
+		//往上滚动
+		leftNum-=10;
+		slideTo();
+	},function(){
+		//往下滚动
+		leftNum+=10;
+		slideTo();
+	});
+	
+	
+	function slideTo(){
+		if(leftNum<=0){
+			leftNum=0;
+		}else if(leftNum>=spanMax){
+			leftNum=spanMax;
+		}
+		
+		var scale=leftNum/spanMax;
+		span.style.left=leftNum+'px';
+		ul.style.left= -scale*liMax +'px';
+	}
+	
+	
+	
+	
+	//滚轮事件
+	function mScroll(obj,callbackUp,callbackDown){
+		//chrome/ie
+		obj.onmousewheel = function(ev){
+			var ev = ev||event;
+			fn(ev);
+			return false;
+		}
+		//ff
+		obj.addEventListener('DOMMouseScroll',function(ev){
+			var ev = ev||event;	
+			fn(ev);
+		});
+		
+		function fn(ev){
+			var ev = ev||event;		
+			var fx = ev.wheelDelta || ev.detail;
+			var bDown = true;
+	
+			if (ev.detail) {
+				//下
+				bDown = fx > 0 ? true : false;
+			} else {
+				//上
+				bDown = fx > 0 ? false : true;
+			}
+			
+			/*
+			 * 如果bDown为true，说明滚轮往下滚动；
+			 * 如果bDown为false，说明滚轮往上滚动。
+			 * 
+			 */
+			if (bDown) {
+				callbackDown&&callbackDown();
+			}else{
+				callbackUp&&callbackUp();
+			}
+			
+			ev.preventDefault();
+		}
+	}
+	
+	
+	
+	//获取css样式
+	function css(){
+		if(arguments.length===2){
+			if(arguments[0].currentStyle){
+				return arguments[0].currentStyle[arguments[1]];
+			}else{
+				return getComputedStyle(arguments[0])[arguments[1]];
+			}
+		}else{
+			arguments[0].style[arguments[1]]=arguments[2];
+		}
+	}
+	
+	
+	
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

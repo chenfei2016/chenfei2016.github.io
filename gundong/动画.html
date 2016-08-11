@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+    *{ margin:0; padding:0; }
+    .box{ width:430px; height:456px; background:url(images/meet_sprite.png) no-repeat; animation: move 1s steps(17) forwards }
+    
+    @keyframes move{
+        0%{ background-position:0 0; }
+        100%{ background-position:-7310px 0; }
+    }
+    
+    .box:hover{ animation:move2 1s steps(17) forwards; }
+     @keyframes move2{
+        0%{ background-position:-7310px 0; }
+        100%{ background-position:0 0; }
+    }
+
+    </style>   
+</head>
+
+<body>
+    
+<div class="box"></div>
+
+
+
+</body>
+</html>

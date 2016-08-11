@@ -1,0 +1,184 @@
+
+/*样式重置*/
+body,ul,p,h1,h2,h3,input,dl,dd,dt{margin:0;padding:0;font-size: 12px;font-family: Arail,"宋体"}
+li{list-style:none;vertical-align:top;}
+a{text-decoration: none;}
+a:hover{text-decoration:underline;}
+img{border: none;vertical-align:top;}
+input{padding:0; border:1px solid #000;margin:0;}
+select{ border:1px solid #000; padding:0;}
+textarea{padding:0; border:1px solid #000; resize:none;margin:0; overflow:auto;}
+.clear{zoom:1;}
+.clear:after{content: "";display: block;clear: both;}
+
+.ico{background: url(img/ico.gif);}
+/*顶部样式*/
+.top{width: 100%;}
+.titleWrap{background: url(img/bg.gif) repeat-x;}
+.title{width: 984px;margin: 0 auto;position: relative;height: 71px;}
+.title h1{width: 159px;padding-top: 32px;height: 0;position: absolute;left: 0;top: 24px;overflow: hidden;}
+.title .topNav{position: absolute;left: 174px;right: 0;}
+.topNav a{color: #ccc;width: 98px;height: 71px;float: left;line-height: 71px;text-align: center;text-decoration: none;}
+.topNav .active:hover{background: url(img/ico.gif) -60px -34px;}
+.topNav a:hover{background: url(img/ico.gif)  -202px 0px;}
+.topNav .lastHot:hover{background: url(img/ico.gif) -123px -248px;width: 113px;text-align: left;text-indent: 19px;}
+.active{background: url(img/ico.gif) -60px -34px;}
+.lastHot {position: relative;}
+.hotIco{background-position: 0 -36px;width: 24px;height: 16px;position: absolute;left: 79px;top: 23px;}
+.title form{width: 274px;height: 30px;position: absolute;right: 0;top: 21px;}
+.title input{background-color: #eaeaea;border: none;outline: none;}
+.searchBox{position: relative;}
+.title .searchBtn{float: left;width: 11px;height: 12px;position:absolute;left: 13px;top: 9px;background-position: -44px -37px;}
+.title .search{color: #9b9b9b;float: left;width: 177px;height: 30px;padding-left: 34px;border-radius: 15px;}
+.title form a{float: left;width: 63px;height: 30px;color: #787878;text-indent:15px;line-height: 38px;position:relative;}
+.loginIco{position: absolute;left:48px;top: 14px; width:12px;height: 7px;background-position: 0 -52px;}
+
+.secondNavWrap{background: url(img/bg.gif) repeat-x 0 -72px;}
+.secondNav{width:576px;margin: 0 auto;height:27px;padding-top: 7px;margin: 0 auto;}
+.secondNav a{float: left;padding:0 13px;height: 20px;margin-right: 36px;color: #fff;line-height: 20px;text-align: center;text-decoration: none;}
+.secondNavActive{border-radius: 10px;background: url(img/bg.gif) repeat-x 0 -107px;}
+.secondNav a:hover{border-radius: 10px;background: url(img/bg.gif) repeat-x 0 -107px;}
+
+/*广告区域*/
+.bannerWrap{height: 336px;width: 100%;background: url(img/bg.gif) repeat-x 0 -128px;}
+.banner{width: 984px;margin: 0 auto;position: relative;}
+#left{position: absolute;left: -52px;top: 149px;width: 20px;height: 38px;background-position: 0 -59px;}
+#right{position: absolute;right: -52px;top:149px;width: 20px;height: 38px;background-position: 0 -104px;}
+#left:hover{background-color: rgba(0,0,0,.3);box-shadow: 0 0 0 5px rgba(0,0,0,.3);}
+#right:hover{background-color: rgba(0,0,0,.3);box-shadow: 0 0 0 5px rgba(0,0,0,.3);}
+#bannerImg{float: left;}
+.download{float: left;position: relative;}
+.download img{}
+.download a{position: absolute;left: 19px;top: 212px; width: 216px;height: 56px;background-position: 0 -146px;}
+.download a:hover{background: url(img/btndown2.png);}
+.download p{color: #8d8d8d;position: absolute;left: 16px;top: 280px;background: none;height: 14px;line-height: 14px;}
+
+/*主体部分*/
+.mainWrap{width: 100%;background: #f5f5f5;height: 1390px;border-bottom:1px solid #d3d3d3; }
+.main{width: 984px;margin: 0 auto;background: #fff;overflow: hidden;}
+/*主体左侧部分*/
+.mainLeft{width: 710px;border-left: 1px solid #d3d3d3;float: left;height: 1390px;padding-left: 20px;overflow: hidden;}
+
+/*标题公用样式*/
+.sameHeader{width: 690px;height: 53px;border-bottom: 2px solid #c10d0c;}
+.sameHeader h2{float:left;width: 122px;height: 53px;line-height: 70px;text-indent: 34px;font-weight: normal;font-size: 20px;
+               color: #333;position: relative;}
+.sameHeader h2 span{position: absolute;left:10px;top: 29px;background-position:-25px -46px;width: 14px;height: 13px;overflow: hidden; }
+.sameHeader nav{float:left;padding-top: 28px;} 
+.sameHeader nav a{float:left;padding:0 13px;color: #666;height: 14px;line-height: 14px;position: relative;}
+.sameHeader nav a span{background: url(img/bg.gif) no-repeat 0 -445px;width: 1px;height: 11px;position: absolute;right: 0;top: 2px;}
+.sameHeader .more{float:right;margin-right: 12px;display: inline;padding-top: 31px;position: relative;}
+.sameHeader .more a{width: 37px;height: 14px;line-height: 14px;display: block;color: #666;}
+.sameHeader .more a span{width: 8px;height: 6px;position: absolute;left: 29px;top: 36px;background-position:-14px -53px;}
+
+/*热门推荐列表部分*/
+.recommendList{margin-right: -20px;}
+.recommendList li{float: left;width: 140px;margin-right: 42px;margin-top: 22px;}
+.recommendList li .imgLink{display: block;position: relative;height: 140px;}
+.recommendList li img{width: 138px;height: 138px;border: 1px solid #ccceca;}
+.recommendList li .marks{height: 25px;width: 100%;opacity: 0.4;filter:alpha(opacity=70);position: absolute;bottom: 0;left: 0;background: #000;}
+.recommendList li .text{position: absolute;left: 32px;bottom: 4px;color: #ccc;}
+.recommendList li .recommendIco1{width: 14px;height: 11px;background-position: -25px -93px;position: absolute;left: 10px;bottom: 6px;}
+.recommendList li .recommendIco1:hover{background-position: -43px -93px;}
+.recommendList li .recommendIco2{width: 17px;height: 17px;background-position: -25px -75px;position: absolute;right: 10px;bottom: 4px;}
+.recommendList li .recommendIco2:hover{background-position: -43px -75px;}
+.musicText{display: block;line-height:19px;padding-top:8px;color: #000;position: relative;width: 140px;}
+.recommendList li .musicText span{position: absolute;left: 0;top: 10px;width: 35px;height: 15px;background-position: -25px -59px;}
+.radio{text-indent: 42px;}
+                                /*3px问题?????????*/
+/*新碟上架*/
+.newMusicList {height: 184px;padding:1px;border: 1px solid #d3d3d3;margin-top: 20px;width: 685px;position: relative;}
+.newMusicleft{position: absolute;left: 9px;top: 73px;background-position:-25px -108px;width: 7px;height: 13px;}
+.newMusicRight{position: absolute;right: 12px;top: 73px;background-position:-25px -124px;width: 7px;height: 13px;} 
+.newMusicList ul{background: #f5f5f5;padding:28px  0 0 27px;height: 156px;}
+.newMusicList li{margin-right: 14px;float: left;display: inline;}
+.newMusicList li a{display: block;width: 115px;background-position: 0 -211px;}
+.newMusicList li img{width: 98px;height: 98px;border:1px solid #e2e2e2;}
+.newMusicList li strong{display: block;height: 18px;line-height: 18px;color: #000;font-weight: normal;margin-top: 8px;}
+.newMusicList li span{display: block;height: 18px;line-height: 18px;color: #666;}
+
+/*榜单*/
+.list{margin-top: 18px;}
+.listMenu{background: #f4f4f4;border: 1px solid #c3c3c3;margin-top: 19px;width: 687px;}
+.listMenu .listMenuLi{width: 228px;border-right: 1px solid #c3c3c3;float: left;}
+.listMenuTop{width: 228px;height: 120px;position: relative;height: 120px;}
+.listMenuTop img{position: absolute;left: 19px;top: 20px;width: 80px;height: 80px;box-shadow: inset 0 0 0 1px #959595,
+                 0 14px 14px -14px #959595; }
+.listMenuTop p{position: absolute;left: 109px;top: 28px;}
+.listReplay{width: 22px;height: 22px;position: absolute;left: 109px;top: 54px; background-position:-57px -113px;}
+.listReplay:hover{background-position:-80px -113px;}
+.listAdd{width: 19px;height: 17px;position: absolute;left: 141px;top: 56px; background-position:-35px -113px;}
+.listAdd:hover{background-position:-104px -113px;}
+
+#border{border-right: none;}
+.listSubMenu li{height: 32px;line-height: 32px;color: #000;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding:0 10px 0 28px;width: 190px;position: relative;}
+.listSubMenu li{padding-right: 90px;width: 110px;}
+.listSubMenu li:nth-child(odd){background: #e8e8e8;}
+.listSubMenu li span{padding:0 14px 0 0;text-decoration: none;}
+.listSubMenu li .red{color: red;}
+.listSubMenu .last{text-indent: 92px;}
+.listSubMenu .last{padding-right: 10px;width: 190px;}
+.listSubMenu a{color: #333;}
+.listSubMenu .replay{background-position: 0 -205px;width: 17px;height: 17px;position: absolute;left: 132px;top: 5px;}
+.listSubMenu .replay:hover{background-position: 0 -226px;}
+.listSubMenu .add{background-position: -18px -205px;width: 13px;height: 17px;position: absolute;left: 156px;top: 6px;}
+.listSubMenu .add:hover{background-position: -18px -226px;}
+.listSubMenu .love{background-position: -32px -205px;width: 17px;height: 17px;position: absolute;left: 177px;top: 6px;}
+.listSubMenu .love:hover{background-position: -32px -226px;}
+/*主体右侧部分*/
+.mainRight{ width: 250px;border-left: 1px solid #d3d3d3;border-right: 1px solid #d3d3d3;float: left;height: 1390px;position: relative;display: inline;margin-right: -10px;}
+/*登录*/
+.loginWrap{height: 122px;padding:1px;padding-top: 0;border-bottom: 1px solid #b1b1b1;position: relative;box-shadow: 0 2px 2px -2px #b1b1b1;}
+.login{background:url(img/bg.gif) repeat-x 0 -479px;height: 121px;}
+.login p{width: 206px;line-height: 22px;color: #666;position: absolute;left: 22px;top: 17px;}
+.login a{position: absolute;left: 75px;top:76px;width: 100px;height: 30px;background-position: -115px -211px;line-height: 30px;text-align: center;color: #fff;}
+
+/*入驻歌手*/
+.singer{padding-left: 20px;width: 210px;}
+/*右侧小标题公用样式*/
+.rightTitle{height: 40px;border-bottom: 1px solid #ccc;}
+.rightTitle h3{color: #333;line-height: 52px;float: left;}
+.rightTitle a{color: #666;line-height: 52px;float:right;}
+
+.singerList{padding-top: 6px;}
+.singerList li{width: 208px;height: 60px;border: 1px solid #ccc;position: relative;margin-top: 14px;}
+.singerList img{width: 62px;height: 62px;position: absolute;left: -1px;top: -1px;}
+.singerList dl{position: absolute;left: 76px;top: 0px;}
+.singerList dt{height: 35px;line-height: 35px;font-weight: bold;}
+.singerList dt a{color: #333;}
+.singerList dd{height: 23px;line-height: 23px;}
+.singerList dd a{color: #666;}
+.apply{display: block;height: 31px;line-height: 31px;text-align: center;background-position: 0 -358px;margin: 14px 0 13px 0;width: 210px;color: #333;text-decoration: none;}
+
+/*热门Dj*/
+.hotDj{padding-left: 20px;width: 210px;}
+.hotDjList{padding-top: 10px;}
+.hotDjList li{position: relative;height: 40px;margin-top: 10px;}
+.hotDjList img{position:absolute;left: 0;right: 0; }
+.hotDjList dl{position: absolute;left: 50px;right: 0;}
+.hotDjList dt{height: 24px;line-height: 24px;overflow: hidden;}
+.hotDjList dt a{color: #000;padding-right: 14px;position: relative;float: left;}
+.hotDjList dt span{position: absolute;right: 0px;top: 5px;background-position:-35px -131px;width: 11px;height: 13px;}
+.hotDjList dd{height: 16px;line-height: 18px;}
+.hotDjList dd a{color: #666;}
+
+/*回到顶部*/
+.backTop{width: 47px;height: 42px;position: absolute;left: 10px;bottom: 34px;background-position: -159px -100px;}
+
+/*底部*/
+.footerWrap{width: 100%;background: #f9f9f9;}
+.footer{width: 984px;margin: 0 auto;height: 125px;padding-top: 30px;	}
+
+.footer .plan{line-height: 22px;float: left;width: 234px;margin-left: 28px;position: relative;}
+.footer .plan span{position: absolute;left: 0;top: 3px;background-position: -159px -60px;width: 37px;height: 37px;}
+.footer .plan .toplink{color: #666;}
+.footer .plan p{width: 184px;height: 40px;padding-left: 50px;}
+.footer .plan a{color: #999;}
+
+.footer .about{float: left;width: 388px;margin-left: 63px;line-height: 22px;}
+.footer .about span{float: left;color: #9b9b9b;}
+.footer .about a{float: left;color: #9b9b9b;}
+#aboutConpany{padding-left: 10px;}
+
+.feedback{float: right;height: 18px;line-height: 18px;padding:0 28px 0 22px;margin-top: 13px;position: relative;color: #9b9b9b;}
+.feedback span{width: 19px;height: 16px;position: absolute;left: 0;top: 2px;background-position: -159px -40px;}

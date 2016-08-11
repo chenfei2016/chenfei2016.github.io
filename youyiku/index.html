@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Uelike</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!--contain里面包含了背景图、导航、自动轮播图、可拖拽的显示框、左侧的广告栏、后下角的搜索框、底部的信息-->
+	<div id="contain">
+		<!--可动的背景图-->
+		<div class="bg">
+			<!--Uelike大背景-->
+			<div class="bg-1">
+				<img src="img/g1.png" alt="">
+				<a href="javascript:;"></a>
+			</div>
+			<!--拿着右手圆片的-->
+			<div class="bg-2">
+				<img src="img/g2.png" alt="">
+				<a href="javascript:;"></a>
+			</div>
+			<!--拿着e字母的左手-->
+			<div class="bg-3">
+				<img src="img/g3.png" alt="">
+			</div>
+		</div>
+		<!--页面最左侧的小广告标识-->
+		<div class="besidePic">
+			<a href="javascript:;"></a>
+		</div>
+		<!--底部导航部分-->
+		<div class="nav">
+			<!--导航下方代表选中状态的绿色底框-->
+			<div class="bottomLine"></div>
+			<!--导航项-->
+			<ul>
+				<li><a>网站首页</a></li>
+				<li><a>案例展示</a></li>
+				<li><a>服务内容</a></li>
+				<li><a>关于我们</a></li>
+				<li><a>联系我们</a></li>
+			</ul>
+		</div>
+		<!--每一个导航对应的选项卡的内容-->
+		<div id="indexContent">
+			<!--"网站首页"对应的选项卡的内容-->
+			<div id="homePage"></div>
+			<!--"案例展示"对应的选项卡的内容-->
+			<div id="caseShow" class="contentSame">
+				<div class="close">
+					<a href="javascript:;">
+						<img src="img/close.png"/>
+					</a>
+				</div>
+				<div id="box">
+					<!--模拟滚动条-->
+					<div id="scroll">
+						<!--滚动条里面的小方块-->
+						<div id="scrollbox"></div>
+					</div>
+					<!--wrap包含所有的wrapItem项，每一个wrapItem是一个小item-->
+					<div id="wrap1"><!--已在JS中生成 --></div>
+				</div>
+				<!--导航内容下面的选项卡-->
+				<div class="bottomMes">
+					<ul>
+						<li class="bottomMesAct">
+							<a href="javascript:;">经典案例</a>
+						</li>
+						<li>
+							<a href="listno.html" target="mainFrame">全部案例</a>
+						</li>
+					</ul>
+				</div>
+				<!--指向导航内容的小三角-->
+				<div class="arrowbottom arrowbottom1"></div>
+			</div>
+			<!--"服务内容"对应的选项卡的内容-->
+			<div id="serviceContent" class="contentSame">
+				<div class="close">
+					<a href="javascript:;">
+						<img src="img/close.png"/>
+					</a>
+				</div>
+				<div class="bottomMes">
+					<ul>
+						<li class="bottomMesAct">
+							<a href="javascript:;">服务项目</a>
+						</li>
+						<li>
+							<a href="javascript:;">服务流程</a>
+						</li>
+						<li>
+							<a href="javascript:;">服务客户</a>
+						</li>
+					</ul>
+				</div>
+				<div class="serverDetail">
+					<div class="datailAct">
+						<img src="img/xiangmu.gif" alt="" />
+					</div>
+					<div>
+						<img src="img/liucheng.gif" alt="" />
+					</div>
+					<div>
+						<img src="img/customer.jpg" alt="" />
+					</div>
+				</div>
+				<div class="arrowbottom arrowbottom2"></div>
+			</div>
+			<!--"关于我们"对应的选项卡的内容-->
+			<div id="aboutUs" class="contentSame">
+				<div class="close">
+					<a href="javascript:;">
+						<img src="img/close.png"/>
+					</a>
+				</div>
+				<div class="bottomMes">
+					<ul>
+						<li class="bottomMesAct">
+							<a href="javascript:;">关于我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="aboutUsDetail">
+					<div class="left"><!--JS中已生成--></div>
+					<div class="right">
+						<img src="img/about.jpg" alt="" />
+					</div>
+				</div>
+				<div class="arrowbottom arrowbottom3"></div>
+			</div>
+			<!--"联系我们"对应的选项卡的内容-->
+			<div id="contactUs" class="contentSame">
+				<div class="close">
+					<a href="javascript:;">
+						<img src="img/close.png"/>
+					</a>
+				</div>
+				<div class="imgForm">
+					<img src="img/guest.jpg" alt="" />
+				</div>
+				<form action="" class="form">
+					<input type="text" class="name" placeholder="姓名(Name)"/>
+					<input type="tel" class="tel" placeholder="电话(TEL)"/>
+					<input type="email" class="email" placeholder="邮箱(E-mail)"/>
+					<textarea name="" rows="" cols="" placeholder="内容(Message)"></textarea>
+				</form>
+				<div class="bottomMes"><!--JS已生成--></div>
+				<div class="officeDetail"></div>
+				<div class="arrowbottom arrowbottom4"></div>
+			</div>
+		</div>
+		<!--可拖拽的显示框-->
+		<div class="rightBeside">
+			<div class="besideContent">
+				<a  href="javascript:;" class="extendSign"></a>
+				<ul class="changeDot">
+					<li>
+						<a href="javascript:;" class="noAct act"></a>
+					</li>
+					<li>
+						<a href="javascript:;" class="noAct"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--自动播放的幻灯片小窗口-->
+		<div class="slide">
+			<div class="arrow">
+				<a href="javascript:;" class="arrowLeft">
+					<img src="img/wlprev.gif"/>
+				</a>
+				<a href="javascript:;" class="arrowRight">
+					<img src="img/wlnext.gif"/>
+				</a>
+			</div>
+			<div class="wrap">
+				<div class="wrapBox" id="wrap"><!--JS中已生成--></div>
+			</div>
+		</div>
+		<!--右下角的搜索框-->
+		<div class="search">
+			<form action="" id="form">
+				<input type="text" placeholder="案例搜索" class="text"/>
+				<input type="button" class="searchBtn"/>
+			</form>
+		</div>
+		<!--网页底部的信息-->
+		<div class="footer">
+			<div class="footerLeft">
+				<span>
+					<img src="img/footl.jpg" alt="" />
+				</span>
+			</div>
+			<div class="footerRight">
+				<a href="javascript:;"><img src="img/logo3.png" alt=""></a><a href="javascript:;"><img src="img/logo1.png" alt=""></a><a href="javascript:;"><img src="img/logo2.png" alt=""></a><a href="javascript:;"><img src="img/logo4.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-1.12.2.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/loadingData.js"></script>
+	<script src="js/tools.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

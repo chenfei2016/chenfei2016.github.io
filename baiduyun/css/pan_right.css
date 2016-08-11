@@ -1,0 +1,270 @@
+/*右侧主体*/
+.right_wrap {
+	position: absolute;
+	left: 210px;
+	top: 48px;
+	bottom: 0;
+	right: 0;
+}
+/*------------------------------------------------*/
+/*右侧头部 新建和上传*/
+.right_header {
+	width: 100%;
+	height: 49px;
+	background: #f7f7f7;
+	border-bottom: 1px solid #d2d2d2;
+	font-size: 12px;
+}
+.right_header div {
+	float: left;
+}
+/*上传按钮部分*/
+.updatas {
+	width: 106px;
+	height: 26px;
+	background: rgb(33,122,220);
+	border: 1px solid rgb(19,98,180);
+	border-radius: 3px;
+	margin-left: 25px;
+	position: relative;
+	top: 11px;
+}
+.updatas span {
+	
+	cursor: pointer;
+}
+.updatas span:first-of-type {
+	float: left;
+	width: 90px;
+	height: 26px;
+	border-right: 1px solid #5C9CE0;
+	text-align: center;
+	line-height: 26px;
+	color: #fff;
+	text-indent: 1em;
+}
+.updatas span:first-of-type i {
+	float: left;
+	position: relative;
+	left: 20px;
+	top: 1px;
+	width: 20px;
+	height: 24px;
+	background: url(../img/sys-icon_b547193.png) no-repeat 0 0;
+}
+.updatas span:last-of-type {
+	float: right;
+	width: 14px;
+	height: 100%;
+	border-left: 1px solid #1263B5;
+	position: relative;
+}
+.updatas span:last-of-type i {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -4px;
+	margin-top: -2px;
+	width: 0;
+	height: 0;
+	border: 4px solid rgba(255,255,255,0);
+	border-top: 4px solid #fff; 
+}
+/*上传文件显示出来的菜单*/
+.uptype {
+	width: 106px;
+	position: absolute;
+	left: -1px;
+	bottom: -50px;
+	background: #fff;
+	z-index: 100;
+	border: 1px solid #ccc;
+	display: none;
+}
+.uptype li {
+	height: 24px;
+	background: #fff;
+}
+.uptype li a {
+	display: block;
+	text-align: center;
+	line-height: 24px;
+}
+.uptype li a:hover {
+	background: #F1F1F1;
+}
+/*新建文件夹样式控制*/
+.createFolder {
+	width: 106px;
+	height: 26px;
+	background: #F8F7F7;
+	border: 1px solid #A7A7A7;
+	border-radius: 3px;
+	margin-left: 25px;
+	position: relative;
+	top: 11px;
+	
+}
+.createFolder span {
+	position: absolute;
+	left: 10px;
+	top: 1px;
+	width: 20px;
+	height: 24px;
+	background: url(../img/sys-icon_b547193.png) no-repeat -148px 0;
+}
+.createFolder a {
+	display: block;
+	text-indent: 2em;
+	color: #666;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	box-shadow: inset 0 0 3px #ccc;
+}
+.createFolder a:hover {
+	background: #fff;
+}
+/*------------------------------------------------*/
+/*右侧 文件操作*/
+.right_content {
+	height: 100%;
+	padding-left: 10px;
+}
+
+/*右侧 文件树*/
+.file_method {
+	height: 30px;
+	padding-left: 10px;
+	line-height: 30px;
+}
+.file_method span,.file_method a  {
+	display: inline-block;
+	font-size: 12px;
+	text-align: center;
+	color: #000;
+	cursor: pointer;
+	position: relative;
+	top: -1px;
+}
+.file_method a {
+	color: #63C7FF;
+	display: none;
+	margin-right: 15px;
+}
+.file_method a:hover {
+	text-decoration: underline;
+	color: #81ABFF;
+}
+.file_method span:after {
+	content: "";
+	width: 0;
+	height: 1px;
+	position: absolute;
+	bottom: 4px;
+	left: 0;
+	background: #000;
+	transition: 0.3s;
+}
+.file_method span:hover:after {
+	width: 100%;
+}
+/*文件行为控制*/
+.file_ctrl {
+	height: 38px;
+	border: 1px solid #e5e5e5;
+	background: #f7f7f7;
+}
+/*文件显示区*/
+.flie_list {
+	width: 100%;
+	overflow: auto;
+	padding: 10px;
+}
+.folder, .file {
+	width: 106px;
+	height: 122px;
+	float: left;
+	margin: 0 30px 30px 10px;
+}
+.folderImg, .fileImg {
+	width: 94px;
+	height: 96px;
+	margin: 0 auto;
+	background: url(../img/file.png) no-repeat 15px 18px;
+	border: 2px solid rgba(0,0,0,0);
+	position: relative;
+}
+.hover {
+	border: 2px solid red;
+}
+.selected {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	border-right: 2px solid red;
+	border-bottom: 2px solid red;
+	display: none;
+	cursor: default;
+}
+/*--------------------------*/
+.folderName, .fileName {
+	width: 100%;
+	height: 26px;
+	font-size: 12px;
+	text-align: center;
+}
+.folderName a, .fileName a {
+	display: block;
+	height: 26px;
+	margin: 0 auto;
+	width: 100%;
+	line-height: 26px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.folderName a:hover,.fileName a:hover{
+	text-decoration: underline;
+}
+/*---*/
+.reName {
+	height: 24px;
+	width: 142px;
+	position: relative;
+	left: -18px;
+	display: none;
+	padding-top: 2px;
+}
+.reName input {
+	float: left;
+	width: 75px;
+	text-align: center;
+	padding: 2px;
+	margin-left: 4px;
+}
+.reName span {
+	float: left;
+	margin-left: 2px;
+	width: 22px;
+	height: 22px;
+	background: url(../img/btn_icon_17d92fd.gif) no-repeat 0 -512px;
+}
+.reName span:nth-of-type(2) {
+	
+	background: url(../img/btn_icon_17d92fd.gif) no-repeat -27px -512px;
+}
+
+/*显示对应类型的文件图标*/
+.flie_list .txt {
+	background-position: -100px -209px;;
+}
+.flie_list .pdf {
+    background-position: 15px -209px;
+}
+.flie_list .doc {
+    background-position: 15px -97px;
+}
